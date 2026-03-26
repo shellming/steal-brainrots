@@ -31,7 +31,7 @@ export const GamePlayArea: React.FC<GamePlayAreaProps> = ({ gameUrl, coverImage 
     <div className="flex flex-col gap-2">
       <div
         ref={containerRef}
-        className="w-full rounded-xl overflow-hidden border border-slate-700 shadow-2xl bg-slate-800"
+        className="w-full rounded-xl overflow-hidden border border-slate-300 dark:border-slate-700 shadow-2xl bg-slate-100 dark:bg-slate-800"
       >
         <AspectRatio ratio={16 / 9}>
           {isPlaying && gameUrl ? (
@@ -44,7 +44,7 @@ export const GamePlayArea: React.FC<GamePlayAreaProps> = ({ gameUrl, coverImage 
             />
           ) : (
             <button
-              className="w-full h-full relative group overflow-hidden bg-slate-900 cursor-pointer p-0 border-0"
+              className="w-full h-full relative group overflow-hidden bg-slate-200 dark:bg-slate-900 cursor-pointer p-0 border-0"
               onClick={() => setIsPlaying(true)}
               aria-label={`Click to Play ${MainName}`}
             >
@@ -97,7 +97,7 @@ export const GamePlayArea: React.FC<GamePlayAreaProps> = ({ gameUrl, coverImage 
       </button>
 
       <div className="text-center mt-2 px-2">
-        <p className="text-sm font-medium text-slate-400">
+        <p className="text-sm font-medium text-slate-500 dark:text-slate-400">
           The game takes some time to load, please be patient.
         </p>
       </div>

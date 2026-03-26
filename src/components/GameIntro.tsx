@@ -22,15 +22,15 @@ export const GameIntro: React.FC<GameIntroProps> = ({
 }) => {
 
   return (
-    <div className="flex flex-col gap-4 p-6 bg-slate-800/30 rounded-xl border border-slate-700/50">
+    <div className="flex flex-col gap-4 p-6 bg-slate-50/50 dark:bg-slate-800/30 rounded-xl border border-slate-200 dark:border-slate-700/50">
       <div className="flex items-start justify-between gap-4">
         <div>
-          <h1 className="text-2xl md:text-3xl font-bold text-slate-100 mb-2 tracking-tight">
+          <h1 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-slate-100 mb-2 tracking-tight">
             {title}
           </h1>
           <div className="flex flex-wrap gap-2">
             {tags.map((tag) => (
-              <Badge key={tag} variant="secondary" className="bg-slate-700 text-slate-300 hover:bg-slate-600">
+              <Badge key={tag} variant="secondary" className="bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-600">
                 {tag}
               </Badge>
             ))}
@@ -38,7 +38,7 @@ export const GameIntro: React.FC<GameIntroProps> = ({
         </div>
 
         <div className="flex items-center gap-3 shrink-0">
-          <span className="text-sm text-slate-400 font-medium hidden sm:inline-block">Share:</span>
+          <span className="text-sm text-slate-500 dark:text-slate-400 font-medium hidden sm:inline-block">Share:</span>
           <div className="flex gap-2">
             {/* Facebook */}
             <Button
@@ -57,7 +57,7 @@ export const GameIntro: React.FC<GameIntroProps> = ({
             <Button
               variant="outline"
               size="icon"
-              className="bg-black border-slate-700 text-white hover:bg-black/80 hover:border-slate-600 h-9 w-9"
+              className="bg-black border-slate-300 dark:border-slate-700 text-white hover:bg-black/80 hover:border-slate-400 dark:hover:border-slate-600 h-9 w-9"
               onClick={() => window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(title)}`, '_blank')}
               aria-label="Share on X (Twitter)"
             >
@@ -82,7 +82,7 @@ export const GameIntro: React.FC<GameIntroProps> = ({
         </div>
       </div>
 
-      <div className="mt-2 border-t border-slate-700/50 pt-8 text-slate-300">
+      <div className="mt-2 border-t border-slate-200 dark:border-slate-700/50 pt-8 text-slate-900 dark:text-slate-300">
         <div dangerouslySetInnerHTML={{ __html: gameContent }} />
       </div>
     </div>

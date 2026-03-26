@@ -7,14 +7,14 @@ import { visit } from 'unist-util-visit';
 
 // Define Tailwind classes for each element type
 const elementClasses: Record<string, string> = {
-  h2: 'text-2xl font-bold text-slate-100 mt-8 mb-4 first:mt-0 scroll-mt-24',
-  h3: 'text-xl font-semibold text-slate-200 mt-6 mb-3',
-  p: 'leading-relaxed mb-4 text-base text-slate-300',
-  ul: 'list-disc pl-6 mb-4 space-y-2 text-slate-300',
-  ol: 'list-decimal pl-6 mb-4 space-y-2 text-slate-300',
-  li: 'pl-1 marker:text-slate-500',
-  strong: 'text-slate-100 font-bold',
-  blockquote: 'border-l-4 border-slate-600 pl-4 italic text-slate-400 my-4'
+  h2: 'text-2xl font-bold text-slate-900 dark:text-slate-100 mt-8 mb-4 first:mt-0 scroll-mt-24',
+  h3: 'text-xl font-semibold text-slate-800 dark:text-slate-200 mt-6 mb-3',
+  p: 'leading-relaxed mb-4 text-base text-slate-700 dark:text-slate-300',
+  ul: 'list-disc pl-6 mb-4 space-y-2 text-slate-700 dark:text-slate-300',
+  ol: 'list-decimal pl-6 mb-4 space-y-2 text-slate-700 dark:text-slate-300',
+  li: 'pl-1 marker:text-slate-400 dark:marker:text-slate-500',
+  strong: 'text-slate-900 dark:text-slate-100 font-bold',
+  blockquote: 'border-l-4 border-slate-300 dark:border-slate-600 pl-4 italic text-slate-600 dark:text-slate-400 my-4'
 };
 
 function rehypeAddClasses() {

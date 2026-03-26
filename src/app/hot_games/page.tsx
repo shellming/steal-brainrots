@@ -17,7 +17,7 @@ export default function HotGamesPage() {
     return (
         <Layout>
             <div className="container mx-auto px-4 py-8">
-                <h1 className="text-3xl font-bold text-white mb-8">Hot Games</h1>
+                <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-8">Hot Games</h1>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     {allGames.map((game) => (
@@ -27,7 +27,7 @@ export default function HotGamesPage() {
                             className="block"
                         >
                             <Card
-                                className="bg-slate-800/50 border-slate-700/50 overflow-hidden group relative cursor-pointer hover:border-indigo-500/50 transition-colors p-0 h-full"
+                                className="bg-white dark:bg-slate-800/50 border-slate-200 dark:border-slate-700/50 overflow-hidden group relative cursor-pointer hover:border-indigo-500/50 transition-colors p-0 h-full"
                             >
                                 <CardContent className="p-0">
                                     <div className="relative aspect-video w-full overflow-hidden">
@@ -46,7 +46,7 @@ export default function HotGamesPage() {
                                         </div>
                                     </div>
                                     <div className="p-4">
-                                        <h3 className="text-slate-100 font-semibold text-center truncate">{game}</h3>
+                                        <h3 className="text-slate-900 dark:text-slate-100 font-semibold text-center truncate">{game}</h3>
                                     </div>
                                 </CardContent>
                             </Card>

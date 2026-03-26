@@ -24,7 +24,7 @@ export const RelatedGames: React.FC<RelatedGamesProps> = ({ games }) => {
             className="block"
           >
             <Card
-              className="bg-slate-800/50 border-slate-700/50 overflow-hidden group relative cursor-pointer hover:border-indigo-500/50 transition-colors p-0 h-full"
+              className="bg-white dark:bg-slate-800/50 border-slate-200 dark:border-slate-700/50 overflow-hidden group relative cursor-pointer hover:border-indigo-500/50 transition-colors p-0 h-full"
             >
               <CardContent className="p-0">
                 <div className="relative aspect-video w-full overflow-hidden">
