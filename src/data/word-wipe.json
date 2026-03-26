@@ -1,0 +1,16 @@
+{
+  "title": "Word Wipe",
+  "description": "Word Wipe is a fast-paced word search puzzle where you connect letters to clear the board. Link tiles in any direction to boost your score before time runs out!",
+  "tags": [
+    "Arcade",
+    "Puzzle",
+    "Casual",
+    "Word",
+    "Brain",
+    "Mobile",
+    "Logic",
+    "Crazy Games"
+  ],
+  "gameUrl": "//arenaservices.cdn.arkadiumhosted.com/playgame/api/playgame/play/zygomatic.arkadiumarena.com/webgl-word-wipe/",
+  "coverImage": "https://image.steal-brainrots.com/word-wipe.avif"
+}

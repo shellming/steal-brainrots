@@ -6,8 +6,7 @@ import { Layout } from '@/components/Layout';
 import { GamePlayArea } from '@/components/GamePlayArea';
 import { GameIntro } from '@/components/GameIntro';
 import { RelatedGames } from '@/components/RelatedGames';
-import allGames from '@/data/all_games.json';
-import relatedGames from '@/data/related_games.json';
+import relatedGames from '@/data/meta/related_games.json';
 import { GameConfig } from '@/types';
 import { markdownToHtml } from '@/lib/markdownToHtml';
 import { normalizeGameName } from '@/lib/helper';
@@ -61,15 +60,6 @@ export async function generateMetadata({ params }: { params: Promise<{ game: str
     };
 }
 
-export async function generateStaticParams() {
-    // Generate params for all known games
-    // We assume the items in all_games.json are the display names
-    // and the files are named with the slugified version
-    return allGames.map((game) => ({
-        game: normalizeGameName(game),
-    }));
-}
-
 export default async function GamePage({ params }: { params: Promise<{ game: string }> }) {
     const { game } = await params;
     const data = await getGameData(game);
@@ -105,7 +95,7 @@ export default async function GamePage({ params }: { params: Promise<{ game: str
 
                 {/* Right Column: Sidebar (Related Games) - Takes 30% width on large screens */}
                 <div className="lg:col-span-3 flex flex-col gap-6">
-                    <RelatedGames games={relatedGames} />
+                    <RelatedGames games={relatedGames as { name: string; tag: 'hot' | 'new' | '' }[]} />
                 </div>
             </div>
         </Layout>

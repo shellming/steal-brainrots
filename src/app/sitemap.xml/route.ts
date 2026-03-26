@@ -1,5 +1,5 @@
 import { getUrl, getImage, MainUrl } from '@/lib/helper';
-import allGames from '@/data/all_games.json';
+import allGames from '@/data/meta/all_games.json';
 
 const BASE_URL = `https://${MainUrl}`;
 

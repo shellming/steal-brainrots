@@ -1,0 +1,14 @@
+{
+  "title": "GeoGuessr",
+  "description": "GeoGuessr is a thrilling geography puzzle game where you explore the world via Google Street View. Use visual clues to guess your location and test your global knowledge.",
+  "tags": [
+    "Puzzle",
+    "Guessing",
+    "Brain",
+    "School",
+    "Google",
+    "Quiz"
+  ],
+  "gameUrl": "https://openguessr.com/",
+  "coverImage": "https://image.steal-brainrots.com/geoguessr.avif"
+}

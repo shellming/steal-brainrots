@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Layout } from '@/components/Layout';
 import { Card, CardContent } from '@/components/ui/card';
 import { getUrl, getImage, MainName } from '@/lib/helper';
-import allGames from '@/data/all_games.json';
+import allGames from '@/data/meta/all_games.json';
 
 export const metadata = {
     title: `All Games - ${MainName}`,

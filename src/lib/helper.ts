@@ -1,6 +1,6 @@
 
-export const MainName = 'Stone Grass';
-export const MainUrl = 'stone-grass.com';
+export const MainName = 'Steal Brainrots';
+export const MainUrl = 'steal-brainrots.com';
 
 export function getImage(game: string) {
     return 'https://image.' + MainUrl + '/' + normalizeGameName(game) + '.avif'

@@ -6,8 +6,8 @@ import { Layout } from '@/components/Layout';
 import { GamePlayArea } from '@/components/GamePlayArea';
 import { GameIntro } from '@/components/GameIntro';
 import { RelatedGames } from '@/components/RelatedGames';
-import gameData from '@/data/stone-grass.json';
-import relatedGames from '@/data/related_games.json';
+import gameData from '@/data/steal-brainrots.json';
+import relatedGames from '@/data/meta/related_games.json';
 import { GameConfig } from '@/types';
 import { markdownToHtml } from '@/lib/markdownToHtml';
 
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 };
 
 const App = async () => {
-  const filePath = path.join(process.cwd(), 'src/data/stone-grass.md');
+  const filePath = path.join(process.cwd(), 'src/data/steal-brainrots.md');
   const gameContentMarkdown = fs.readFileSync(filePath, 'utf-8');
   const gameContentHtml = await markdownToHtml(gameContentMarkdown);
 
@@ -54,7 +54,7 @@ const App = async () => {
 
         {/* Right Column: Sidebar (Related Games) - Takes 30% width on large screens */}
         <div className="lg:col-span-3 flex flex-col gap-6">
-          <RelatedGames games={relatedGames} />
+          <RelatedGames games={relatedGames as { name: string; tag: 'hot' | 'new' | '' }[]} />
         </div>
       </div>
     </Layout>
