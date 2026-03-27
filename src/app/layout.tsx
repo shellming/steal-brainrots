@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <Script defer data-domain={MainUrl} src="https://analytic.ttmmhome.fun/js/script.js" />
+        <Script defer data-domain={MainUrl} src="https://analytic.18160044.xyz/js/script.js" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
